@@ -1,6 +1,6 @@
 package com.revature.rideshare.distanceservice.models;
 
-import com.revature.exceptions.IllegalNullArgumentException;
+import com.revature.rideshare.distanceservice.exceptions.IllegalNullArgumentException;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -45,7 +45,7 @@ public class TripDTO {
 	@Valid
 	private TripStatus tripStatus;
 
-	public TripDTO(com.revature.models.Trip trip) {
+	public TripDTO(Trip trip) {
 		if (trip == null) {
 			throw new IllegalNullArgumentException("TripDTO requires a trip to construct.");
 		}
